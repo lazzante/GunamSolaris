@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Login page</title>
+  <link rel="stylesheet" th:href="@{/css/application.css}">
+
+</head>
+<body>
+
+<p th:if="${loginError}" class="error">Wrong user or password</p>
+<form th:action="@{/login}" method="post" >
+  <div class="loginForm">
+    <img th:src="@{/images/gunam_logo.png}" class="logo" alt="Gunam Logo"/>
+    <br>
+    <div class="inputTexts">
+      <label for="username">USERNAME</label>:
+      <input type="text" style="width: 50%; " id="username" name="username" autofocus="autofocus" /> <br />
+      <br>
+      <label for="password">PASSWORD</label>:
+      <input type="password"  style="width: 50%;" id="password" name="password" /> <br />
+    </div>
+    <input  type="submit" value="Log in" class="submitButton"/>
+  </div>
+</form>
+</body>
+</html>
